@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Reader</title><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Ga+Maamli&family=Pacifico&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            
+        }
+        #userInput {
+            width: 80%;
+            height: 50%;
+            box-shadow: 0px 0px 10px gray;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 20px;
+            border: 1px solid #ccc;
+            overflow-y: auto;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .highlight {
+            background-color: rgba(211, 211, 211, 0.808);
+        }
+        .btns{
+position: relative;
+            display: flex;
+            justify-content: end;
+            width: 80%;
+            
+        }
+        .btns button{
+            margin-left: 10px;
+        }
+        .ga-maamli-regular {
+  font-family: "Ga Maamli", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 40px;
+  text-align: center;
+  padding: 2px 10px;
+}
+[contentEditable=true]:empty:not(:focus):before {
+  content: attr(data-text)
+  
+}
+div:empty:before {
+  content:attr(data-placeholder);
+  color:gray
+}
+
+    </style>
+</head>
+<body>
+    <h2 class="ga-maamli-regular">Enhancing Pronunciation and Reading Fluency</h2>
+
+    <div id="userInput" contentEditable=true data-text="Enter your text here"></div>
+    <div class="btns">
+        
+        <button onclick="readText()">Read Text</button>
+        <button onclick="stopReading()">Stop Reading</button>
+        
+    </div>
+
+   <script src="./app.js"></script>
+
+</body>
+</html>
